@@ -272,7 +272,7 @@
 			}
 			var count = 0;
 			selector.find('img, iframe').each(function(){
-				$(this).one('load', function() {
+				$(this).one('load error', function() {
 				  if(++count == total) callback();
 				}).each(function() {
 				  if(this.complete) $(this).load();
